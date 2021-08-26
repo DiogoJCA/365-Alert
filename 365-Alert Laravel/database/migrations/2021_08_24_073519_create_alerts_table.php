@@ -14,8 +14,8 @@ class CreateAlertsTable extends Migration
     public function up()
     {
         Schema::create('alerts', function (Blueprint $table) {
-            $table->id();
-            $table->enum('type',['Very-high','high','medium','low']);
+            $table->increments('id');
+            $table->enum('type', ['Very-high', 'high', 'medium', 'low']);
             $table->string('location');
             $table->float('water-level-chart');
             $table->timestamps();
